@@ -154,10 +154,10 @@ Than type `contract`, all the info of the contract is deplayed.
 
 Try some interactions:
 `$ await contract.name()`
-It is shown `Token Name`.
+It is shown `'Token Name'`.
 
 `$ await contract.symbol()`
-It is shown `Token Symbol`.
+It is shown `'Token Symbol'`.
 
 License
 ----
