@@ -10,8 +10,8 @@ module.exports = {
     // You need to create your own "secret.json" file to set up this network.
     // To deploy on the BSC mainner, the url in the secret.json has to be the mainnet url.
     moralisBSCTestnet: {
-      url: secret.url,
-      accounts: [secret.key]
+      url: secret.moralis_url,
+      accounts: [secret.private_key]
     },
   },
 
