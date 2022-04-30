@@ -26,6 +26,8 @@ coverage
 coverage.json
 typechain
 
+secret.json
+
 #Hardhat files
 cache
 artifacts
