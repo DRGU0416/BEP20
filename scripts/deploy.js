@@ -8,8 +8,8 @@ async function main() {
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
   // deploy contracts here:
-  const Token = await ethers.getContractFactory("Token");
-  const token = await Token.deploy(1000000);
+  const Token = await ethers.getContractFactory("BEP20Token");
+  const token = await Token.deploy();
 
   console.log("Token contract address:", token.address);
 }

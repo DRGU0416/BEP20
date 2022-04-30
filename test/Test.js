@@ -1,7 +1,7 @@
 const { expect } = require("chai")
 const { ethers } = require("hardhat")
 
-describe("A standard ERC20 contract", function () {
+describe("A standard BEP20 contract", function () {
     
     let HardhatToken;
     let hardhatToken;
@@ -13,21 +13,21 @@ describe("A standard ERC20 contract", function () {
     
     beforeEach(async function() {
         // Deploy the contract, and pass in the inital amount of 1000000 tokens.
-        HardhatToken = await ethers.getContractFactory("Token");
+        HardhatToken = await ethers.getContractFactory("BEP20Token");
         
         // Getting a list of the accounts in the node we're connected to.
         [owner, addr1, addr2] = await ethers.getSigners();
         
-        hardhatToken = await HardhatToken.deploy(tl); 
+        hardhatToken = await HardhatToken.deploy(); 
     })
 
     describe("Migration", function () {
-        it("Should track the name, symbol and decimal of the ERC20 token", async function() {
+        it("Should track the name, symbol and decimal of the BEP20 token", async function() {
           const tokenName = "Token Name";
-          const tokenSymbol = "Token Symbol";
+          const tokenSymbol = "TKN";
           expect(await hardhatToken.name()).to.equal(tokenName);
           expect(await hardhatToken.symbol()).to.equal(tokenSymbol);
-          expect(await hardhatToken.decimals()).to.equal(18);  // default for ERC20
+          expect(await hardhatToken.decimals()).to.equal(18);  // default for BEP20
         })
 
         it("Should check the total supply and owner's balance", async function() {

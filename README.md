@@ -1,6 +1,6 @@
 # BEP20
 
-Issue a standard BEP20 tokens using OpenZeppelin.
+Issue a standard BEP20 tokens.
 
 ## Technology Stack & Tools
 
@@ -27,6 +27,7 @@ $ npm install
 $ cd bep20
 $ npx hardhat node
 ```
+You will get
 ```
 Started HTTP and WebSocket JSON-RPC server at http://127.0.0.1:8545/
 
@@ -104,7 +105,7 @@ Private Key: 0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e
 
 
 ### 5. Migrate the smart contract
-Migrate the smart contract in the hardhat blockchain.
+Migrate the smart contract in the hardhat blockchain, fire up a cmd window, and input
 
 `npx hardhat run scripts/deploy.js --network localhost`
 
@@ -118,18 +119,18 @@ Migrate the smart contract onto the BSC Testnet.
 You should get something like this:
 
 ```
-A standard ERC20 contract
+Compiled 1 Solidity file successfully
+
+
+  A standard BEP20 contract
     Migration
-The owner address is: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-Total supply is: 1000000
-      ✔ Should track the name, symbol and decimal of the ERC20 token (48ms)
-The owner address is: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-Total supply is: 1000000
+      ✔ Should track the name, symbol and decimal of the BEP20 token (65ms)
       ✔ Should check the total supply and owner's balance (48ms)
     Transaction
-The owner address is: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
-Total supply is: 1000000
-      ✔ Should transfer tokens between accounts (70ms)
+      ✔ Should transfer tokens between accounts (66ms)
+
+
+  3 passing (961ms)
 
 
   3 passing (1s)
@@ -143,7 +144,7 @@ For the contract deployed in the localhost (hardhat blockchain), enter the hardh
 
 Set a contract instance for later interaction.
 `$ const contract = await ethers.getContractAt("A", "B")`
-A is the name of the contract file, in this case, "Token".
+A is the name of the contract file, in this case, "BEP20Token".
 B is the address of the deployed contract, which is shown after `npx hardhat run .\scripts\deploy.js --network localhost`.
 
 You will get:

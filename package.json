@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
-    "@openzeppelin/contracts": "^4.5.0"
   },
   "scripts": {
     "deploy": "npx hardhat run src/scripts/deploy.js --network localhost",
