@@ -142,7 +142,7 @@ After successful deployment, one can interact with the deployed contract using h
 For the contract deployed in the localhost (hardhat blockchain), enter the hardhat console:
 `$ npx hardhat console --network localhost`
 
-Set a contract instance for later interaction.
+Set a contract instance for later interactions.
 `$ const contract = await ethers.getContractAt("A", "B")`
 A is the name of the contract file, in this case, "BEP20Token".
 B is the address of the deployed contract, which is shown after `npx hardhat run .\scripts\deploy.js --network localhost`.
@@ -153,12 +153,10 @@ You will get:
 Than type `contract`, all the info of the contract is deplayed.
 
 Try some interactions:
-`$ const name = await contract.name()`
-Input `name`.
+`$ await contract.name()`
 It is shown `Token Name`.
 
-`$ const symbol = await contract.symbol()`
-Input `symbol`.
+`$ await contract.symbol()`
 It is shown `Token Symbol`.
 
 License
