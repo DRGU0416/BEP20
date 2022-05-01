@@ -145,7 +145,8 @@ For the contract deployed in the localhost (hardhat blockchain), enter the hardh
 Set a contract instance for later interactions.
 `$ const contract = await ethers.getContractAt("A", "B")`
 A is the name of the contract file, in this case, "BEP20Token".
-B is the address of the deployed contract, which is shown after `npx hardhat run .\scripts\deploy.js --network localhost`.
+B is the address of the deployed contract, which is shown after 
+`npx hardhat run .\scripts\deploy.js --network localhost`.
 
 You will get:
 `undefined`
@@ -154,10 +155,21 @@ Than type `contract`, all the info of the contract is deplayed.
 
 Try some interactions:
 `$ await contract.name()`
-It is shown `'Token Name'`.
+It is shown
+`'Token Name'`.
 
 `$ await contract.symbol()`
-It is shown `'Token Symbol'`.
+It is shown
+`'Token Symbol'`.
+
+`$ balance = await contract.balanceOf("A")`
+A is the owner's address.
+It is shown
+`BigNumber { value: "1000000000000000000000000" }`
+Check the formated token amount, should be equal to '_totalSupply / (10**18)' in the contract)
+`ethers.utils.formatEther(balance)`
+It is shown
+`'1000000.0'`
 
 License
 ----
