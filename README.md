@@ -162,13 +162,17 @@ Try some interactions:
 
 It is shown
 
-`'Token Name'`.
+`'Token Name'`
+
+Try
 
 `$ await contract.symbol()`
 
 It is shown
 
-`'Token Symbol'`.
+`'Token Symbol'`
+
+Try
 
 `$ balance = await contract.balanceOf("A")`
 
