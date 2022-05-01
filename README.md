@@ -1,6 +1,6 @@
 # BEP20
 
-Issue a standard BEP20 tokens.
+Issue a standard BEP20 token.
 
 ## Technology Stack & Tools
 
