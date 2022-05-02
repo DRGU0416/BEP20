@@ -354,7 +354,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
     _name = "Token Name";
     _symbol = "TKN";
     _decimals = 18;
-    _totalSupply = 1000000 * 10 ** 18;  // 1 million tokens
+    _totalSupply = 2000000000000000000000000;  // 1 million tokens, with 18 decimals
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
