@@ -109,7 +109,7 @@ Migrate the smart contract in the hardhat blockchain, fire up a cmd window, and 
 
 `npx hardhat run scripts/deploy.js --network localhost`
 
-Migrate the smart contract onto the BSC Testnet.
+OR, migrate the smart contract onto the BSC Testnet.
 
 `npx hardhat run scripts/deploy.js --network moralisBSCTestnet`
 
